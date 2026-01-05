@@ -5,7 +5,7 @@ from pytrends.request import TrendReq
 
 BASE_DIR = Path("/content/bigdata_final_project")
 RAW_DIR = BASE_DIR / "raw"
-LOG_DIR = BASE_DIR / "logs"
+LOG_DIR = BASE_DIR / "logs" / "etl"
 
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 LOG_DIR.mkdir(parents=True, exist_ok=True)
