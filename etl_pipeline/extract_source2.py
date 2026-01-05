@@ -1,3 +1,10 @@
+import os, json, time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import re
+
 def extract_etl_source2(raw_sales_path: Path) -> Path:
     keywords = ["coffee", "bakery", "tea", "chocolate"]
     geo = "US-NY"
