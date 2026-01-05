@@ -6,7 +6,12 @@ WAREHOUSE_DIR = BASE_DIR / "warehouse"
 WAREHOUSE_DIR.mkdir(parents=True, exist_ok=True)
 
 DB_PATH = WAREHOUSE_DIR / "coffee_dw.sqlite"
+
+LOG_DIR = BASE_DIR / "logs" / "etl"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+
 LOAD_LOG = LOG_DIR / "load_log.jsonl"
+
 
 def append_jsonl(path: Path, record: dict):
     record = dict(record)
@@ -362,7 +367,7 @@ for name, q in queries.items():
 display(results["Q1_total_revenue"]), display(results["Q2_revenue_by_month"]), display(results["Q3_revenue_by_category"])
 
 print("=== LOAD LOG (last line) ===")
-!tail -n 1 /content/bigdata_final_project/etl_pipeline/logs/load_log.jsonl
+!tail -n 1 /logs/etl/load_log.jsonl
 
 
 tables = pd.read_sql_query("""
