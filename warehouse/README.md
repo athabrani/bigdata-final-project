@@ -27,10 +27,7 @@ Diagram skema dapat dilihat pada folder `schema/`.
 ## 2. Proses Load
 
 Data hasil transformasi ETL dimuat ke SQLite database
-menggunakan script Python (lihat folder ETL).
-
-File database:
-- `coffee_dw.sqlite`
+menggunakan script Python.
 
 ## 3. Data Mart
 
@@ -50,8 +47,3 @@ Query mencakup:
 - Revenue per kategori
 - Weekend vs weekday analysis
 - Trend vs revenue analysis
-
-## 5. Verifikasi Integritas Data
-
-Integritas relasi antar tabel diverifikasi melalui query join
-dan pengecekan foreign key (lihat `verification_queries.sql`).
