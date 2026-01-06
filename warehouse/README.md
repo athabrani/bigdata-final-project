@@ -42,7 +42,7 @@ Tabel ini digunakan untuk kebutuhan dashboard dan analitik agregat harian.
 ## 4. Query Analitik
 
 Query SQL untuk analisis dan verifikasi tersedia di:
-- `sql/analytical_queries.sql`
+- `analytical_queries.sql`
 
 Query mencakup:
 - Total revenue
